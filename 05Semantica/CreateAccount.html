@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta lang="es">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Minerales Paceños">
+        <meta name="description" content="Minerales Paceños es un sitio de divulgación de minerales">
+
+        <meta charset="UTF-8">
+        <title>Crear cuenta</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <p><h1 align="center">Crear cuenta</h1></p>
+            <br>
+            <nav>
+                <table border="0" width="100%">
+                        <tbody>
+                            <tr align="center">
+                                <td><li style="list-style:none;"><a href="Index.html">Regresar</a></li></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </nav>
+        </header>
+        
+        <main>
+            <form action="Index.html" method="post">
+                <fieldset>
+                    <legend>Información de registro</legend><br>
+
+                    <label for="name">Nombre completo:</label>
+                    <input id="name" type="text" name="name" placeholder="Ingresa tu nombre: " required><br>
+                    <hr>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input id="email" type="email" name="email" placeholder="Ingresa tu correo" required><br>
+                    <hr>
+
+                    <label for="password">Contraseña:</label>
+                    <input id="password" type="password" name="password" placeholder="Ingresa tu contraseña" required><br><br>
+                    <hr>
+
+                    <label for="description">Descripción:</label><br>
+
+                    <textarea style="resize: none;" width="40%" id="description" cols="50" rows="10" name="description" placeholder="Ingresa tu descripción"></textarea><br><br>
+                    <hr>
+
+                    <label for="area">¿Qué te gusta de la geología?</label><br>
+                    <select id="area" name="area">
+                        <optgroup label="Ramas">
+                            <option value="mineralogy">Mineralogía</option>
+                            <option value="petrology">Petrología</option>
+                            <option value="paleontology">Paleontología</option>
+                            <option value="stratigraphy">Estratigrafía</option>
+                            <option value="Exogeology ">Exogeología </option>
+                        </optgroup>
+                        
+                        </optgroup>
+                        <optgroup label="Aplicaciones">
+                            <option value="environment">Medio ambiente</option>
+                            <option value="forensic">Geología forense</option>
+                            <option value="naturalResources">Recurso naturales</option>
+                        </optgroup>
+                    </select>
+                    <br><br><br>
+
+                    <label for="birthStone">Piedra de nacimiento</label>
+                    <input id="birthStone" list="birthStones" name="birthStone">
+
+                    <datalist id="birthStones">
+                        <option value="Granate"></option>
+                        <option value="Amatista"></option>
+                        <option value="Aquamarina"></option>
+                        <option value="Diamante"></option>
+                        <option value="Esmeralda"></option>
+                        <option value="Alexandrita"></option>
+                        <option value="Rubí"></option>
+                        <option value="Peridoto"></option>
+                        <option value="Zafiro"></option>
+                        <option value="Turmalina"></option>
+                        <option value="Citrino"></option>
+                        <option value="Tanzanita"></option>
+                    </datalist>
+                </fieldset>
+                <br>
+
+                <button type="submit">Crear Cuenta</button>
+                <br><br>
+
+            </form>
+        </main>
+    </body>
+</html>
