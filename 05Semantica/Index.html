@@ -8,36 +8,33 @@
         <meta name="author" content="Minerales Paceños">
         <meta name="description" content="Minerales Paceños es un sitio de divulgación de minerales">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plaster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/Style.css">
         <title>Minerales Paceños</title>
     </head>
 
-    <body>
+    <body >
         <header id="header">
-            <p><h1 align="center">Los minerales</h1></p>
+            <p><h1  class="headerTitle" align="center">Los minerales</h1></p>
 
-            <nav>
-                <ul>
-                    <table border="0" width="100%">
-                        <tbody>
-                            <tr align="center">
-                                <td><li style="list-style:none;"><a href="#">Variedades</a></li></td>
-                                <td><li style="list-style:none;"><a href="#">Yacimientos</a></li></td>
-                                <td><li style="list-style:none;"><a href="CreateAccount.html">Crear cuenta</a></li></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <nav class="navBar">
+                <ul class="navList">
+                    <li class="navLink"><a href="#">Variedades</a></li>
+                    <li class="navLink"><a href="#">Yacimientos</a></li>
+                    <li class="navLink"><a href="CreateAccount.html">Crear cuenta</a></li>     
                 </ul>
             </nav>
         </header>
 
-        <hr>
 
-        <main id="definition">
-            <p><h2 align="center"><strong>¿Qué son los minerales?</strong></h2></p>
+        <main id="main">
+            <p><h2><strong>¿Qué son los minerales?</strong></h2></p>
             <br>
 
-            <h3 align="justify">
+            <h3>
                 Un mineral <kbd><u>es un material sólido e inorgánico, formado naturalmente cuando uno o más elementos químicos</u></kbd> se unen entre
                 sí. Existen alrededor de más de <del>4,000</del> 6,145 minerales distintos aunque no de manera aislada, ya que por diferentes
                 situaciones, agentes climáticos y procesos geológicos, estos minerales se juntan, formando asi, los diferentes tipos de rocas existentes en
@@ -49,27 +46,27 @@
 
             <blockquote>
                 <br>
-                <div align="center">
+                <div>
                     <img src="Images/rockTypes.png" height="350px" title="tipos de rocas" alt="tipos de rocas">
                 </div>
                 <br>
 
-                <h3 align="justify">
+                <h3>
                     <ul>
                         <li>
-                            <mark><b>Rocas ígneas:</b></mark> magma <del>(roca fundida)</del> (roca fundida, sólidos y gases) el cuál es expulsado de la corteza terrestre, 
+                            <mark class="markDef"><b>Rocas ígneas:</b></mark> magma <del>(roca fundida)</del> (roca fundida, sólidos y gases) el cuál es expulsado de la corteza terrestre, 
                             que posteriormente se enfría y endurece. <br>
                             <em>Ejemplos: Obsidiana, Basalto, Granito.</em>
                         </li>
 
                         <li>
-                            <mark><b>Rocas sedimentarias:</b></mark> rocas ígneas, sedimentarias o metamórficas que son compactadas en capas con el tiempo despues de
+                            <mark class="markDef"><b>Rocas sedimentarias:</b></mark> rocas ígneas, sedimentarias o metamórficas que son compactadas en capas con el tiempo despues de
                             haber sido erosionadas y fragmentadas por los distintos agentes climáticos. <br>
                             <em>Ejemplos: Arenisca, Caliza, Limolita.</em>
                         </li>
 
                         <li>
-                            <mark><b>Rocas metamórficas:</b></mark> rocas sendimentarias o igneas, que son sometidas a una gran temperatura y una gran presión, gracias
+                            <mark class="markDef"><b>Rocas metamórficas:</b></mark> rocas sendimentarias o igneas, que son sometidas a una gran temperatura y una gran presión, gracias
                             a esto, son transformadas a rocas metamórficas. <br>
                             <em>Ejemplos: Pizarra, Mármol, Cuarcita.</em>
                         </li>
@@ -81,31 +78,29 @@
             <br><br>
         </main>
 
-        <hr>
-
         <section id="properties">
-            <p><h2 align="center"><b>Propiedades de los minerales</b></h2></p>
+            <p><h2><b>Propiedades de los minerales</b></h2></p>
             <br>
 
-            <h3 align="justify">
+            <h3 class="sectionTitle">
                 Los minerales pueden presentar muchas propiedades, pero las más principales son:
             </h3>
 
             <blockquote>
-                <h3 align="justify">
-                    <mark><b>Dureza:</b></mark> es la resistencia/oposición que tienen los minerales hacia golpes, abrasión, rayaduras, cortes, etc. Para medir
+                <h3>
+                    <mark class="markDef"><b>Dureza:</b></mark> es la resistencia/oposición que tienen los minerales hacia golpes, abrasión, rayaduras, cortes, etc. Para medir
                     la dureza de un mineral existe la escala de Mohs, yendo desde el mineral más blando y de menor dureza como el <u>Talco (1),</u> al
                     más duro y resistente como el <u>diamante (10)</u>, siendo este el mayor en la escala de Mohs. Los demás minerales que no se
                     encuentran en la escala se les puede encontrar de igual forma su dureza, viendo que minerales pueden rayar y por cuales
                     pueden ser rayados.
                     <br><br>
 
-                    <div align="center">
+                    <div>
                         <img src="Images/hardnesses.png" height="400px" title="durezas de minerales" alt="durezas de minerales">
                     </div>
                     <br><br>
 
-                    <mark><b>Densidad:</b></mark> la densidad de un mineral es una de sus propiedades más importantes, ya que es reflejo directo de su quimismo y de su
+                    <mark class="markDef"><b>Densidad:</b></mark> la densidad de un mineral es una de sus propiedades más importantes, ya que es reflejo directo de su quimismo y de su
                     estructura cristalina. La densidad se define como masa por unidad de volumen, y sus unidades son gramos por <u>centímetro
                     cúbico (cm<sup><small>3</small></sup>).</u>
                     El peso específico (G) o densidad relativa de un mineral es un número que expresa la relación entre su peso y el peso de
@@ -114,7 +109,7 @@
                     agua.
                     <br><br>
 
-                    <mark><b>Brillo:</b></mark> el aspecto general de la superficie de un mineral cuando se refleja la luz se conoce con el nombre de brillo. El brillo
+                    <mark class="markDef"><b>Brillo:</b></mark> el aspecto general de la superficie de un mineral cuando se refleja la luz se conoce con el nombre de brillo. El brillo
                     de los minerales puede ser de dos tipos, metálico y no metálico. No hay una línea clara de separación entre estos dos
                     grupos, y a ciertos minerales que están entre ambos tipos se les conoce algunas veces con el nombre de submetálicos.
                     Un mineral que tenga el aspecto brillante de un metal tiene un brillo metálico que es propio de minerales opacos, con
@@ -163,20 +158,20 @@
                     </blockquote>
                     <br>
 
-                    <mark><b>Color:</b></mark> los minerales de un mismo grupo, pueden adoptar distintos colores, siendo las causas más comúnes de este fenómeno, la
+                    <mark class="markDef"><b>Color:</b></mark> los minerales de un mismo grupo, pueden adoptar distintos colores, siendo las causas más comúnes de este fenómeno, la
                     forma en la que la luz pasa a través del cristal, malformaciones estructurales, impurezas de otros minerales o
                     elementos, exposición a radiación, ya sea de manera natural o artificial, oxidación, alteraciones meteóricas, etc. Los
                     minerales que poseen una variedad amplia de colores se les llama <code><q>Alocromáticos</q></code> y a los que solo presentan un color
                     constante se les llama <code><q>Idiocromáticos</q></code>.
                     <br><br>
 
-                    <mark><b>Forma:</b></mark> los minerales pueden presentarse en, tanto formas irregulares como regulares o geométricas, la forma que estos adoptan
+                    <mark class="markDef"><b>Forma:</b></mark> los minerales pueden presentarse en, tanto formas irregulares como regulares o geométricas, la forma que estos adoptan
                     es producto de la manera en la que los átomos de diferentes elementos que componen el mineral se acomodan, unen y
                     estructuran en el proceso de formación y critalización, la forma dependerá si en el ambiente en el que sucede el proceso
                     se encuentra en equilibrio o no.
                     <br><br>
 
-                    <table border="1" cellpadding="5" width="80%" align="center">
+                    <table cellpadding="5" width="80%" align="center">
                         <caption><h3><b>Tipos de cristales según su forma</b></h3></caption>
 
                         <thead>
@@ -190,7 +185,7 @@
                             <tr>
                                 <td>
                                     <ul>
-                                    <li><mark>Acicular:</mark> Cristales delgados como agujas.</li>
+                                        <li><mark>Acicular:</mark> Cristales delgados como agujas.</li>
                                         <li><mark>Hojoso:</mark> Cristales alargados, aplastados, de forma laminar.</li>
                                         <li><mark>Equant:</mark> Cristales equidimensionales.</li>
                                         <li><mark>Bladed:</mark> Cristales alargados, planos, como hojas de cuchillo.</li>
@@ -231,8 +226,6 @@
             <br>
         </section>
 
-        <hr>
-
         <article id="embeddedInfo">
             <p><h2 align="center"><b>Más información acerca de minerales:</b></h2></p>
 
@@ -242,14 +235,15 @@
             <br><br>
 
             <div align="center">
-                <h3>Geología activa</h3>
+                <h3 class="embeddedTitle">Geología activa</h3>
                 <iframe width="771" height="480" src="https://www.youtube.com/embed/LtTRr60yNGc" title="🔴 ¿Qué son los MINERALES en la GEOLOGÍA? 💎---- (tipos de minerales en la geología)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
             </div>
         </article>
         <br><br>
 
-        <article id="video" align="center">
-            <h3>Cristales haciendo un sonido parecido al de una arpa al ser frotados:</h3>
+        <article class="articleVideo">
+            <h3 class="embeddedTitle">Cristales haciendo un sonido parecido al de una arpa al ser frotados:</h3>
+            <br>
 
              <video controls width="300">
                 <source src="Videos/crystalMakingSound.mp4" type="video/mp4">
