@@ -12,3 +12,5 @@
 [04: Formularios y entradas de datos](/05Semantica/CreateAccount.html)
 
 [05: Semántica del documento HTML](/05Semantica/Index.html)
+
+[06: Formato de texto, fuentes, fondos y bordes](/05Semantica/Index.html)
