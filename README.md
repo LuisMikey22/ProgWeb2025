@@ -2,7 +2,7 @@
 
 ## Luis Miguel Lucatero Pérez, IDS, 5to semestre, Turno matutino
 
-
+### HTML--------------------------------------------------------
 [01: HTML básico y formato de contenido](/01FormatoTexto/Index.html)
 
 [02: Divs, enlaces y etiquetas de diseño](/02LinksYDivs/Index.html)
@@ -13,4 +13,6 @@
 
 [05: Semántica del documento HTML](/05Semantica/Index.html)
 
+### CSS---------------------------------------------------------
 [06: Formato de texto, fuentes, fondos y bordes](/05Semantica/Index.html)
+[07: Tarjeta personalizada con información e imagen](/CSS-Card/Index.html)

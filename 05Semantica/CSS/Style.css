@@ -101,6 +101,7 @@ li mark {
 }
 
 table {
+    border-collapse: collapse;
     text-align: justify;
 }
 
