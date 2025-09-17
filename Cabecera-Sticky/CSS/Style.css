@@ -497,7 +497,7 @@ footer {
     display: flex;
 }
 
-.social-media-links button {
+.social-media-links .instagram-button, .social-media-links .youtube-button {
     height: 48px;
     width: 48px;
     margin: 20px;
