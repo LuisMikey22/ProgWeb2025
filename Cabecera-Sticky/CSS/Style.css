@@ -17,6 +17,12 @@
     --border-radius-50: 50px;
 }
 
+*::selection {
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+}
+
+
 body {
     height: auto;
     width: 100%;
@@ -26,7 +32,7 @@ body {
     padding: 0;
     align-items: center;
     justify-items: center;
-    overflow: auto;
+    overflow-X: hidden;
 }
 
 header {
@@ -126,6 +132,7 @@ nav {
 
 .nav-link-list li:hover {
     background-color: var(--color-darker-blue);
+    cursor: pointer;
 }
 
 .nav-link-list li a {
@@ -209,7 +216,6 @@ main {
     justify-content: center;
     overflow: hidden;
     transform-style: flat;
-    perspective: 600px;
 }
 
 .see-left-button-container {
@@ -382,7 +388,7 @@ main {
 .shipping-icon, .return-icon, .star-review-icon {
     height: 30px;
     width: auto;
-    margin: auto 1em auto auto;
+    margin: auto 0.5em auto auto;
     padding: 0;
     display: inline-flex;
 }
@@ -470,13 +476,31 @@ footer {
     padding: 2em;
     background-color: var(--color-dark-blue);
     justify-content: center;
+    align-items: center;
     display: flex;
 }
 
-.footer-instagram-button, .footer-youtube-button {
+.footer-brand-links-bar .svg-logo {
+    height: 90px;
+    width: auto;
+    margin: auto auto auto 2%;
+    padding: 0;
+    display: inline;
+    cursor: pointer;
+}
+
+.social-media-links {
+    height: auto;
+    width: auto;
+    margin: auto 0 auto auto;
+    padding: 0;
+    display: flex;
+}
+
+.social-media-links button {
     height: 48px;
     width: 48px;
-    margin:  auto 40px auto 40px;
+    margin: 20px;
     padding: 0;
     display: flex;
     background-color: var(--color-white);
@@ -485,11 +509,11 @@ footer {
     cursor: pointer;
 }
 
-.footer-instagram-button:hover, .footer-youtube-button:hover {
+.instagram-button:hover, .youtube-button:hover {
     background-color: var(--color-light-grey);
 }
 
-.footer-instagram-button img, .footer-youtube-button img {
+.instagram-button img, .youtube-button img {
     height: 32px;
     width: auto;
     margin: auto;
@@ -501,11 +525,17 @@ footer {
     width: auto;
     margin: 0;
     padding: 1em 1.5em 0.5em 0;
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
-    font: var(--font-secondary);
-    font-size: 16px;
+    background-color: var(--color-darker-blue);
+    border-top-color: var(--color-lighter-blue);
+    border-top-style: solid;
+    border-top-width: 2px;
     text-align: right;
     justify-content: right;
     display: flex;
+}
+
+.footer-copyright-content small {
+    color: var(--color-white);
+    font: var(--font-secondary);
+    font-size: 15px;
 }
