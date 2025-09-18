@@ -426,8 +426,8 @@ footer {
 
 .footer-links-bar {
     width: 100%;
-    margin: 0;
-    padding: 30px;
+    margin: 1.5% auto;
+    padding: 0;
     background-color: var(--color-white);
     justify-content: center;
     display: flex;
@@ -489,7 +489,7 @@ footer {
     height: auto;
     width: auto;
     margin: 0;
-    padding: 2em;
+    padding: 1.5em 0;
     background-color: var(--color-dark-blue);
     justify-content: center;
     align-items: center;
@@ -497,9 +497,9 @@ footer {
 }
 
 .footer-brand-links-bar .svg-logo {
-    height: 90px;
+    height: 70px;
     width: auto;
-    margin: auto auto auto 2%;
+    margin: auto auto auto 5%;
     padding: 0;
     display: inline;
     cursor: pointer;
@@ -508,14 +508,14 @@ footer {
 .social-media-links {
     height: auto;
     width: auto;
-    margin: auto 0 auto auto;
+    margin: auto 5% auto auto;
     padding: 0;
     display: flex;
 }
 
 .social-media-links .instagram-button, .social-media-links .youtube-button {
-    height: 48px;
-    width: 48px;
+    height: 42px;
+    width: 42px;
     margin: 20px;
     padding: 0;
     display: flex;
@@ -530,10 +530,10 @@ footer {
 }
 
 .instagram-button img, .youtube-button img {
-    height: 32px;
+    height: 65%;
     width: auto;
     margin: auto;
-    padding: auto;
+    padding: 0;
 }
 
 .footer-copyright-content {
