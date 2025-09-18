@@ -22,11 +22,18 @@
     background-color: var(--color-dark-blue);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
     height: auto;
     width: 100%;
     max-width: 100%;
+    min-width: 100%;
     display: grid;
     margin: 0;
     padding: 0;
@@ -51,15 +58,15 @@ nav {
     height: auto;
     width: auto;
     margin: 0;
-    padding: 0;
+    padding: 1.3% 10%;
     background-color: var(--color-dark-blue);
     display: flex;
-    position: sticky;
+    position: relative;
     justify-content: center;
 }
 
 .svg-logo {
-    height: 90px;
+    height: 70px;
     width: auto;
     margin: auto 40px auto 0;
     padding: 0;
@@ -69,15 +76,15 @@ nav {
 
 .svg-logo img {
     height: 100%;
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0;
 }
 
 .search-button {
-    height: 48px;
-    width: auto;
-    margin: auto 40px;
+    height: 38px;
+    width: 38px;
+    margin: auto 20px auto auto;
     padding: 0;
     background-color: var(--color-white);
     border-style: none;
@@ -86,9 +93,9 @@ nav {
 }
 
 .account-button {
-    height: 48px;
-    width: auto;
-    margin: auto 40px;
+    height: 38px;
+    width: 38px;
+    margin: auto 20px;
     padding: 0;
     display: inline;
     background-color: var(--color-white);
@@ -98,9 +105,9 @@ nav {
 }
 
 .cart-button {
-    height: 48px;
-    width: auto;
-    margin: auto 0 auto 40px;
+    height: 38px;
+    width: 38px;
+    margin: auto 0 auto 20px;
     padding: 0;
     background-color: var(--color-white);
     border-style: none;
@@ -109,8 +116,10 @@ nav {
 }
 
 .search-button img, .account-button img, .cart-button img {
-    height: auto;
+    height: 90%;
     width: auto;
+    margin: auto;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -120,19 +129,15 @@ nav {
 
 .nav-link-list {
     list-style: none;
-    margin: 0 40px 0 40px;
+    margin: auto;
     padding: 0;
+    overflow: scroll;
 }
 
 .nav-link-list li {
     margin: 0;
-    padding: 40px 0 50px 0;
+    padding: 0;
     display: inline-block;
-}
-
-.nav-link-list li:hover {
-    background-color: var(--color-darker-blue);
-    cursor: pointer;
 }
 
 .nav-link-list li a {
@@ -140,13 +145,14 @@ nav {
     padding: 10px 20px;
     display: inline-block;
     color: var(--color-white);
-    font-size: 25px;
+    font-size: 20px;
     font-family: var(--font-main);
     cursor: pointer;
 }
 
 .nav-link-list li a:hover {
-    text-decoration-line: underline;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
 }
 
 .nav-decoration-line {
@@ -160,6 +166,7 @@ nav {
     width: 100%;
     clear: both;
     background-color: var(--color-white);
+    box-shadow: 2px 2px 4px var(--color-light-grey);
 }
 
 main {
@@ -167,7 +174,7 @@ main {
     width: 90%;
     max-width: 90%;
     min-width: 90%;
-    margin-top: 20px 0 20px 0;
+    margin: 20px 0 20px 0;
     padding: 0;
     display: grid;
     text-align: center;
@@ -218,23 +225,23 @@ main {
     transform-style: flat;
 }
 
-.see-left-button-container {
+.previous-element-button-container {
     height: 20%;
     width: 5%;
-    margin: 0;
+    margin: auto;
     padding: 10px;
     display: flex;
 }
 
-.see-right-button-container {
+.next-element-button-container {
     height: 20%;
     width: 5%;
-    margin: 0;
+    margin: auto;
     padding: 10px;
     display: flex;
 }
 
-.see-left-button-container button, .see-right-button-container button {
+.previous-element-button, .next-element-button {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -248,21 +255,21 @@ main {
     cursor: pointer;
 }
 
-.see-left-button-container button::before {
+.previous-element-button::before {
     content: "<";
     height: 100%;
     width: auto;
     margin: auto;
 }
 
-.see-right-button-container button::before {
+.next-element-button::before {
     content: ">";
     height: 100%;
     width: auto;
     margin: auto;
 }
 
-.see-left-button-container button:hover, .see-right-button-container button:hover {
+.previous-element-button:hover, .next-element-button:hover {
     background-color: var(--color-light-coral);
 }
 
@@ -270,15 +277,18 @@ main {
     margin: auto;
     width: 90%;
     height: 380px;
-    padding: 0 1% 0 1%;
+    padding: 1%;
     max-width: 90%;
     min-width: 90%;
     background-color: var(--color-light-grey);
     border-radius: var(--border-radius-24);
+    border-color: var(--color-light-grey);
+    border-width: 25px;
+    border-style: solid;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: scroll;
     transform-style: flat;
     perspective: 600px;
 }
@@ -287,15 +297,18 @@ main {
     margin: auto;
     width: 90%;
     height: 380px;
-    padding: 0 1% 0 1%;
+    padding: 1%;
     max-width: 90%;
     min-width: 90%;
     background-color: var(--color-coral);
     border-radius: var(--border-radius-24);
+    border-color: var(--color-coral);
+    border-width: 25px;
+    border-style: solid;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: scroll;
     transform-style: flat;
     perspective: 600px;
 }
@@ -304,15 +317,18 @@ main {
     margin: auto;
     width: 90%;
     height: 380px;
-    padding: 0 1% 0 1%;
+    padding: 1%;
     max-width: 90%;
     min-width: 90%;
     background-color: var(--color-electric-blue);
     border-radius: var(--border-radius-24);
+    border-color: var(--color-electric-blue);
+    border-width: 25px;
+    border-style: solid;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: scroll;
     transform-style: flat;
     perspective: 600px;
 }
@@ -331,7 +347,7 @@ main {
 }
 
 .art-item img {
-    height: 150px;
+    height: 130px;
     width: auto;
     box-shadow: 4px 4px 4px var(--color-darker-blue);
     border-radius: var(--border-radius-16);
@@ -346,7 +362,7 @@ main {
     margin: 20px 0 0 0;
     padding: 0;
     text-align: justify;
-    font-size: 20px;
+    font-size: 16.5px;
     font-family: var(--font-secondary);
     color: var(--color-dark-blue);
 }
@@ -524,7 +540,7 @@ footer {
     height: auto;
     width: auto;
     margin: 0;
-    padding: 1em 1.5em 0.5em 0;
+    padding: 1em 1.5em 1.5em 0;
     background-color: var(--color-darker-blue);
     border-top-color: var(--color-lighter-blue);
     border-top-style: solid;
