@@ -66,9 +66,9 @@ nav {
 }
 
 .svg-logo {
-    height: 70px;
+    height: 4.8em;
     width: auto;
-    margin: auto 40px auto 0;
+    margin: auto auto auto 0;
     padding: 0;
     display: inline;
     cursor: pointer;
@@ -82,9 +82,9 @@ nav {
 }
 
 .search-button {
-    height: 38px;
-    width: 38px;
-    margin: auto 20px auto auto;
+    height: 3rem;
+    width: 3rem;
+    margin: auto 1.5rem auto auto;
     padding: 0;
     background-color: var(--color-white);
     border-style: none;
@@ -93,9 +93,9 @@ nav {
 }
 
 .account-button {
-    height: 38px;
-    width: 38px;
-    margin: auto 20px;
+    height: 3rem;
+    width: 3rem;
+    margin: auto 1.5rem;
     padding: 0;
     display: inline;
     background-color: var(--color-white);
@@ -105,9 +105,9 @@ nav {
 }
 
 .cart-button {
-    height: 38px;
-    width: 38px;
-    margin: auto 0 auto 20px;
+    height: 3rem;
+    width: 3rem;
+    margin: auto 0 auto 1.5rem;
     padding: 0;
     background-color: var(--color-white);
     border-style: none;
@@ -142,39 +142,40 @@ nav {
 
 .nav-link-list li a {
     margin: auto;
-    padding: 10px 20px;
+    padding: 1rem 1.2rem;
     display: inline-block;
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 1.4rem;
     font-family: var(--font-main);
     cursor: pointer;
 }
 
 .nav-link-list li a:hover {
     text-decoration: underline;
-    text-decoration-thickness: 0.08em;
+    text-decoration-thickness: 0.08rem;
 }
 
 .nav-decoration-line {
-    height: 20px;
+    height: 1rem;
     width: 100%;
     clear: both;
     background-color: var(--color-coral);
 }
 .separation-line {
-    height: 20px;
+    height: 1rem;
     width: 100%;
     clear: both;
     background-color: var(--color-white);
     box-shadow: 2px 2px 4px var(--color-light-grey);
 }
 
+
 main {
     height: auto;
     width: 90%;
     max-width: 90%;
     min-width: 90%;
-    margin: 20px 0 20px 0;
+    margin: 1rem auto;
     padding: 0;
     display: grid;
     text-align: center;
@@ -185,28 +186,18 @@ main {
     width: 90%;
     max-width: 90%;
     min-width: 90%;
-    margin: 30px 0 20px 0;
+    margin: 1.2rem auto 1rem auto;
     padding: 0;
     display: grid;
     text-align: center;
 }
 
-.new-art-title {
-    margin: 0 0 15px 0;
+.new-art-title, .best-selling-art-title, .seasonal-art-title {
+    margin: 0 0 1rem 0;
     padding: 0;
     display: block;
     text-align: center;
-    font-size: 24px;
-    font-family: var(--font-main);
-    color: var(--color-dark-blue);
-}
-
-.best-selling-art-title, .seasonal-art-title {
-    margin: 0 0 15px 0;
-    padding: 0;
-    display: block;
-    text-align: center;
-    font-size: 24px;
+    font-size: 1.45rem;
     font-family: var(--font-main);
     color: var(--color-dark-blue);
 }
@@ -215,7 +206,7 @@ main {
     margin: auto;
     padding: 0;
     width: 100%;
-    height: 380px;
+    height: auto;
     max-width: 100%;
     min-width: 100%;
     display: flex;
@@ -225,19 +216,11 @@ main {
     transform-style: flat;
 }
 
-.previous-element-button-container {
-    height: 20%;
+.previous-element-button-container, .next-element-button-container {
+    height: 100%;
     width: 5%;
     margin: auto;
-    padding: 10px;
-    display: flex;
-}
-
-.next-element-button-container {
-    height: 20%;
-    width: 5%;
-    margin: auto;
-    padding: 10px;
+    padding: 0.8rem;
     display: flex;
 }
 
@@ -246,9 +229,6 @@ main {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-size: 2.2em;
-    font-weight: bold;
-    color: var(--color-darker-blue);
     background-color: var(--color-coral);
     border-style: var(--border-radius-16);
     border-radius: var(--border-radius-16);
@@ -260,6 +240,9 @@ main {
     height: 100%;
     width: auto;
     margin: auto;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--color-darker-blue);
 }
 
 .next-element-button::before {
@@ -267,6 +250,9 @@ main {
     height: 100%;
     width: auto;
     margin: auto;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--color-darker-blue);
 }
 
 .previous-element-button:hover, .next-element-button:hover {
@@ -276,14 +262,14 @@ main {
 .new-art-item-container {
     margin: auto;
     width: 90%;
-    height: 380px;
+    height: auto;
     padding: 1%;
     max-width: 90%;
     min-width: 90%;
     background-color: var(--color-light-grey);
     border-radius: var(--border-radius-24);
     border-color: var(--color-light-grey);
-    border-width: 25px;
+    border-width: 1rem;
     border-style: solid;
     display: flex;
     align-items: center;
@@ -296,14 +282,14 @@ main {
 .best-selling-art-item-container { 
     margin: auto;
     width: 90%;
-    height: 380px;
+    height: auto;
     padding: 1%;
     max-width: 90%;
     min-width: 90%;
     background-color: var(--color-coral);
     border-radius: var(--border-radius-24);
     border-color: var(--color-coral);
-    border-width: 25px;
+    border-width: 1rem;
     border-style: solid;
     display: flex;
     align-items: center;
@@ -316,14 +302,14 @@ main {
 .seasonal-art-item-container { 
     margin: auto;
     width: 90%;
-    height: 380px;
+    height: auto;
     padding: 1%;
     max-width: 90%;
     min-width: 90%;
     background-color: var(--color-electric-blue);
     border-radius: var(--border-radius-24);
     border-color: var(--color-electric-blue);
-    border-width: 25px;
+    border-width: 1rem;
     border-style: solid;
     display: flex;
     align-items: center;
@@ -335,11 +321,11 @@ main {
 
 .art-item {
     align-items: center;
-    margin: 0 10px;
+    margin: 0 1%;
     text-align: center;
-    padding: 20px;
-    width: 200px;
-    height: 280px;
+    padding: 1rem;
+    height: auto;
+    width: 25%;
     background-color: var(--color-white);
     border-style: solid;
     border-color: var(--color-dark-blue);
@@ -347,7 +333,7 @@ main {
 }
 
 .art-item img {
-    height: 130px;
+    height: 8rem;
     width: auto;
     box-shadow: 4px 4px 4px var(--color-darker-blue);
     border-radius: var(--border-radius-16);
@@ -359,10 +345,10 @@ main {
 }
 
 .art-desc {
-    margin: 20px 0 0 0;
+    margin: 1rem 0 0 0;
     padding: 0;
     text-align: justify;
-    font-size: 16.5px;
+    font-size: 1rem;
     font-family: var(--font-secondary);
     color: var(--color-dark-blue);
 }
@@ -370,14 +356,14 @@ main {
 .art-desc:hover {
     text-decoration: underline;
     text-decoration-color: var(--color-dark-blue);
-    text-decoration-thickness: 1.1px;
+    text-decoration-thickness: 0.1rem;
     cursor: pointer;
 }
 
 .shipping-info-banner {
-    height: 120px;
+    height: 5rem;
     width: 100%;
-    margin: 30px auto 0 auto;
+    margin: auto;
     padding: 0;
     display: flex;
     align-items: center;
@@ -385,7 +371,7 @@ main {
     background-color: var(--color-wine-red);
     color: var(--color-white);
     font-family: var(--font-secondary);
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .shipping-info-banner .info-banner-statement {
@@ -402,9 +388,9 @@ main {
 }
 
 .shipping-icon, .return-icon, .star-review-icon {
-    height: 30px;
+    height: 1.6rem;
     width: auto;
-    margin: auto 0.5em auto auto;
+    margin: auto 0.5rem auto auto;
     padding: 0;
     display: inline-flex;
 }
@@ -445,10 +431,11 @@ footer {
 .footer-links-bar .about-links-container h4, .footer-links-bar .help-links-container h4,
 .footer-links-bar .store-links-container h4 {
     margin: 0;
-    padding: 10px;
+    padding: 0.6rem;
     display: inline-block;
     color: var(--color-darker-blue);
-    font-size: 20px;
+    text-align: left;
+    font-size: 1.2rem;
     font-family: var(--font-main);
     line-height: 10px;
     border-bottom-color: var(--color-darker-blue);
@@ -463,7 +450,7 @@ footer {
 
 .about-links-container .about-list li, .help-links-container .help-list li, .store-links-container .store-list li {
     margin: auto;
-    padding: 10px;
+    padding: 0.8rem;
     display: grid;
 }
 
@@ -472,9 +459,9 @@ footer {
     padding: 0;
     display: block;
     color: var(--color-darker-blue);
-    font-size: 1em;
+    font-size: 1rem;
     font-family: var(--font-main);
-    line-height: 0.5em;
+    line-height: 0.5rem;
     cursor: pointer;
 }
 
@@ -489,7 +476,7 @@ footer {
     height: auto;
     width: auto;
     margin: 0;
-    padding: 1.5em 0;
+    padding: 0.3rem 0;
     background-color: var(--color-dark-blue);
     justify-content: center;
     align-items: center;
@@ -497,7 +484,7 @@ footer {
 }
 
 .footer-brand-links-bar .svg-logo {
-    height: 70px;
+    height: 4rem;
     width: auto;
     margin: auto auto auto 5%;
     padding: 0;
@@ -514,14 +501,14 @@ footer {
 }
 
 .social-media-links .instagram-button, .social-media-links .youtube-button {
-    height: 42px;
-    width: 42px;
-    margin: 20px;
+    height: 2.2rem;
+    width: 2.2rem;
+    margin: 1.5rem;
     padding: 0;
     display: flex;
     background-color: var(--color-white);
     border-style: none;
-    border-radius: 20px;
+    border-radius: var(--border-radius-24);
     cursor: pointer;
 }
 
@@ -540,7 +527,7 @@ footer {
     height: auto;
     width: auto;
     margin: 0;
-    padding: 1em 1.5em 1.5em 0;
+    padding: 1rem 1.5rem 1.5rem 0;
     background-color: var(--color-darker-blue);
     border-top-color: var(--color-lighter-blue);
     border-top-style: solid;
@@ -553,5 +540,5 @@ footer {
 .footer-copyright-content small {
     color: var(--color-white);
     font: var(--font-secondary);
-    font-size: 15px;
+    font-size: 1rem;
 }
