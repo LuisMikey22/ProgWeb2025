@@ -30,16 +30,21 @@
 
 
 body {
+    display: grid;
     height: auto;
     width: 100%;
     max-width: 100%;
     min-width: 100%;
-    display: grid;
     margin: 0;
     padding: 0;
     align-items: center;
     justify-items: center;
     overflow-X: hidden;
+    background-image: url(../images/yarnBackgroundTexture.svg);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header {
@@ -166,7 +171,6 @@ nav {
     width: 100%;
     clear: both;
     background-color: var(--color-white);
-    box-shadow: 2px 2px 4px var(--color-light-grey);
 }
 
 
@@ -568,7 +572,6 @@ footer {
     width: 100%;
     margin: 0;
     padding: 2%;
-    background: url(image/yarnBackground.png);
 }
 
 .create-account-form {
@@ -578,6 +581,11 @@ footer {
     margin: auto;
     padding: 0;
     border-style: none;
+    background-color: var(--color-white);
+    border-style: solid;
+    border-color: var(--color-dark-blue);
+    border-width: 2.5px;
+    border-radius: var(--border-radius-24);
 }
 
 .create-account-fieldset {
@@ -587,29 +595,22 @@ footer {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--color-white);
-    border-style: solid;
-    border-color: var(--color-dark-blue);
-    border-radius: var(--border-radius-24);
-    border-width: 2.5px;
+    border-style: none;
     text-align: justify;
 }
 
 .create-account-fieldset legend {
     text-align: center;
     margin: auto;
-    border-style: solid;
-    border-color: var(--color-white);
-    border-radius: var(--border-radius-16);
-    border-width: 5px;
+    padding: 10px;
 }
 
 .create-account-fieldset legend::before {
-    content: "[";
+    content: "--------------";
 }
 
 .create-account-fieldset legend::after {
-    content: "]";
+    content: "--------------";
 }
 
 .name-input-container, .email-input-container, .password-input-container, .desc-container, .techniques-options-container,
