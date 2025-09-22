@@ -272,10 +272,12 @@ main {
     min-width: 90%;
     background-color: var(--color-light-grey);
     border-radius: var(--border-radius-24);
-    border: 1rem solid var(--color-light-grey);
+    border-width: 1rem 1.8rem;
+    border-style: solid;
+    border-color: var(--color-light-grey);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     overflow: scroll;
     transform-style: flat;
     perspective: 600px;
@@ -290,10 +292,12 @@ main {
     min-width: 90%;
     background-color: var(--color-coral);
     border-radius: var(--border-radius-24);
-    border: 1rem solid var(--color-coral);
+    border-width: 1rem 1.8rem;
+    border-style: solid;
+    border-color: var(--color-coral);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     overflow: scroll;
     transform-style: flat;
     perspective: 600px;
@@ -308,10 +312,12 @@ main {
     min-width: 90%;
     background-color: var(--color-electric-blue);
     border-radius: var(--border-radius-24);
-    border: 1rem solid var(--color-electric-blue);
+    border-width: 1rem 1.8rem;
+    border-style: solid;
+    border-color: var(--color-electric-blue);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     overflow: scroll;
     transform-style: flat;
     perspective: 600px;
@@ -319,10 +325,12 @@ main {
 
 
 .art-item {
-    height: auto;
-    width: 17%;
-    max-width: 17%;
-    min-width: 17%;
+    height: 18%;
+    width: 16%;
+    max-width: 16%;
+    min-width: 16%;
+    max-height: 18%;
+    min-height: 18%;
     align-items: center;
     margin: 0 1%;
     text-align: center;
@@ -334,7 +342,7 @@ main {
 }
 
 .art-item img {
-    height: 130px;
+    height: 8rem;
     width: auto;
     box-shadow: 4px 4px 4px var(--color-darker-blue);
     border-radius: var(--border-radius-16);
@@ -352,6 +360,7 @@ main {
     font-size: 16.5px;
     font-family: var(--font-secondary);
     color: var(--color-dark-blue);
+    text-align: justify;
 }
 
 .art-desc::first-letter {
@@ -421,9 +430,9 @@ footer {
     margin: auto;
     padding: 15px;
     background-color: var(--color-white);
-    border-color: var(--color-lighter-blue);
+    border-color: var(--color-light-grey);
     border-style: solid;
-    border-width: 2px 0 0 0;
+    border-width: 3px 0 0 0;
     justify-content: center;
     display: flex;
 }
@@ -600,17 +609,26 @@ footer {
 }
 
 .create-account-fieldset legend {
-    text-align: center;
     margin: auto;
     padding: 10px;
-}
-
-.create-account-fieldset legend::before {
-    content: "--------------";
+    height: auto;
+    width: auto;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-16);
+    text-align: center;
+    z-index: 1;
 }
 
 .create-account-fieldset legend::after {
-    content: "--------------";
+    position: absolute;
+    left: 36%;
+    right: 36%;
+    height: 5%;
+    margin: auto;
+    content: "";
+    border-width: 0 0 0.13rem 0;
+    border-style: solid;
+    border-color: var(--color-dark-blue);
 }
 
 .name-input-container, .email-input-container, .password-input-container, .desc-container, .techniques-options-container,
