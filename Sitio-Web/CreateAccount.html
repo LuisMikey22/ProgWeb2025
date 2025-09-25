@@ -29,10 +29,37 @@
                 </span>
 
                 <ul class="nav-link-list">
-                    <li><a><b>Estambres</b></a></li>
-                    <li><a><b>Patrones</b></a></li>
-                    <li><a><b>Accesorios</b></a></li>
-                    <li><a><b>Ganchos</b></a></li>
+                    <li><a><b>Estambres</b></a>
+                        <ul class="nav-link-sub-list">
+                            <li><a>Algodón</a></li>
+                            <li><a>Lana</a></li>
+                            <li><a>Lino</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a><b>Patrones</b></a>
+                        <ul class="nav-link-sub-list">
+                            <li><a>Principiantes</a></li>
+                            <li><a>Intermedios</a></li>
+                            <li><a>Avanzados</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a><b>Accesorios</b></a>
+                        <ul class="nav-link-sub-list">
+                            <li><a>Recién agregados</a></li>
+                            <li><a>Mejor vendidos</a></li>
+                            <li><a>De temporada</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a><b>Ganchos</b></a>
+                        <ul class="nav-link-sub-list">
+                            <li><a>Metal</a></li>
+                            <li><a>Bambú</a></li>
+                            <li><a>Plástico</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <button class="search-button"><img src="images/searchIcon.svg" alt="search"></button>
@@ -72,7 +99,7 @@
                     <div class="techniques-options-container">
                         <label for="fabric-techniques">Técnica de tejido favorita</label>
 
-                        <select id="fabric-techniques" name="fabric-techniques">
+                        <select id="fabric-techniques" name="fabric-techniques" required>
                             <optgroup label="Tejidos">
                                 <option value="loom">Telares</option>
                                 <option value="knitting">Tejido a aguja</option>
@@ -92,7 +119,7 @@
                     <div class="age-range-container">
                         <label for="Age">Edad</label>
 
-                        <input id="age" list="ages" name="age" placeholder="Edad">
+                        <input id="age" list="ages" name="age" placeholder="Edad" required>
 
                         <datalist id="ages">
                             <option value="15"></option>
