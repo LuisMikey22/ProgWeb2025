@@ -10,6 +10,8 @@
         <link rel="icon" href="Images/EHQALogoCropped.svg" type="image/x-icon"> 
         <link rel="stylesheet" href="CSS/Style.css">
         
+        <script src="Scripts/Script.js" defer></script>
+        
         <title>EstaHambreQueAta</title>
     </head>
 
@@ -17,6 +19,14 @@
     <body>
         <header>
             <nav>
+                <div id="search-bar-container" class="search-bar-container-hidden">
+                    <div class="search-bar-input-container">
+                        <button class="search-bar-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
+                        <input class="search-bar-input" type="text" name="search" placeholder="Buscar" required>
+                        <button id="close-button" class="close-button" title="Cerrar"><img src="Images/closeIcon.svg" alt="close"></button>
+                    </div>
+                </div>
+
                 <span class="svg-logo">
                     <img  src="Images/EHQALogo.svg" alt="EstaHambreQueAta-logo">
                 </span>
@@ -56,7 +66,7 @@
                     </li>
                 </ul>
 
-                <button class="search-button"><img src="Images/searchIcon.svg" alt="search"></button>
+                <button id="search-button" class="search-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
                 <button class="account-button" title="Crear Cuenta"><a href="CreateAccount.html"><img src="Images/userIcon.svg" alt="account"></a></button>
                 <button class="cart-button" title="Tienda"><a href="Index.html"><img src="Images/cartIcon.svg" alt="cart"></a></button>
             </nav>
@@ -76,7 +86,10 @@
                 <div class="new-art-item-container">
 
                     <div class="art-item item1">
-                        <img src="Images/newArtItem (1).png">
+                        <div class="art-item-image-container">
+                            <img src="Images/newArtItem (1).png">  
+                        </div>
+
                         <div class="art-desc-container">
                             <p><h4 class="art-desc">Bufanda delgada de ojos, Algodón.</h4></p>
                             <p><h4 class="art-price">$100.00 MXN</h4></p> 
@@ -84,7 +97,10 @@
                     </div>
 
                     <div class="art-item item2">
-                        <img src="Images/newArtItem (2).png">
+                        <div class="art-item-image-container">
+                            <img src="Images/newArtItem (2).png">
+                        </div>
+                        
                         <div class="art-desc-container">
                             <p><h4 class="art-desc">Cajita organizadora, Algodón.</h4></p>
                             <p><h4 class="art-price">$55.00 MXN</h4></p>  
@@ -92,7 +108,10 @@
                     </div>
 
                     <div class="art-item item3">
-                        <img src="Images/newArtItem (3).png">
+                        <div class="art-item-image-container">
+                            <img src="Images/newArtItem (3).png">  
+                        </div>
+                        
                         <div class="art-desc-container">
                             <p><h4 class="art-desc">Moño pequeño azul, Algodón.</h4></p>
                             <p><h4 class="art-price">$40.00 MXN</h4></p>  
@@ -100,7 +119,10 @@
                     </div>
 
                     <div class="art-item item4">
-                        <img src="Images/newArtItem (4).png">
+                        <div class="art-item-image-container">
+                            <img src="Images/newArtItem (4).png">    
+                        </div>
+                        
                         <div class="art-desc-container">
                             <p><h4 class="art-desc">Sombrero con diseño, Algodón.</h4></p>
                             <p><h4 class="art-price">$70.00 MXN</h4></p>  
@@ -108,15 +130,21 @@
                     </div>
 
                     <div class="art-item item5">
-                        <img src="Images/newArtItem (5).png">
+                        <div class="art-item-image-container">
+                            <img src="Images/newArtItem (5).png">
+                        </div>
+                        
                         <div class="art-desc-container">
                             <p><h4 class="art-desc">Rosa individual, Algodón.</h4></p>
                             <p><h4 class="art-price">$55.00 MXN</h4></p> 
                         </div>
                     </div>
 
-                    <div class="art-item item3">
-                        <img src="Images/newArtItem (3).png">
+                    <div class="art-item item6">
+                        <div class="art-item-image-container">
+                            <img src="Images/newArtItem (3).png">    
+                        </div>
+                        
                         <div class="art-desc-container">
                             <p><h4 class="art-desc">Moño pequeño azul, Algodón.</h4></p>
                             <p><h4 class="art-price">$40.00 MXN</h4></p>   

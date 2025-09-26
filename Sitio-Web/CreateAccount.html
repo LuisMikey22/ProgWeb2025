@@ -10,12 +10,22 @@
         <link rel="icon" href="Images/EHQALogoCropped.svg" type="image/x-icon"> 
         <link rel="stylesheet" href="CSS/Style.css">
 
+        <script src="Scripts/Script.js" defer></script>
+
         <title>Crear cuenta</title>
     </head>
 
     <body>
         <header>
             <nav>
+                <div id="search-bar-container" class="search-bar-container-hidden">
+                    <div class="search-bar-input-container">
+                        <button class="search-bar-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
+                        <input class="search-bar-input" type="text" name="search" placeholder="Buscar" required>
+                        <button id="close-button" class="close-button" title="Cerrar"><img src="Images/closeIcon.svg" alt="close"></button>
+                    </div>
+                </div>
+
                 <span class="svg-logo">
                     <img  src="Images/EHQALogo.svg" alt="EstaHambreQueAta-logo">
                 </span>
@@ -55,7 +65,7 @@
                     </li>
                 </ul>
 
-                <button class="search-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
+                <button id="search-button" class="search-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
                 <button class="account-button" title="Crear Cuenta"><a href="CreateAccount.html"><img src="Images/userIcon.svg" alt="account"></a></button>
                 <button class="cart-button" title="Tienda"><a href="Index.html"><img src="Images/cartIcon.svg" alt="cart"></a></button>
             </nav>
