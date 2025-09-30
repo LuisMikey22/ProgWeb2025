@@ -10,3 +10,36 @@ searchButton.addEventListener('click', () =>{
 closeButton.addEventListener('click', () =>{
     searchBarCont.classList.replace("search-bar-container-visible", "search-bar-container-hidden")
 });
+
+/*
+window.addEventListener('load', () => {
+    new Glider(document.querySelector('.new-art-item-container'), {
+        slidesToScroll: 5,
+        slidesToShow: 10,
+        draggable: false,
+        dots: '.carousel-indicator',
+        arrows: {
+            prev: '.previous-element-button',
+            next: '.next-element-button'
+        },
+        responsive: [
+            {
+            // screens greater than >= 775px
+            breakpoint: 350,
+                settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToShow: 2,
+                    slidesToScroll: 5,
+                }
+            },{
+            // screens greater than >= 1024px
+            breakpoint: 800,
+                settings: {
+                    slidesToShow: 10,
+                    slidesToScroll: 5,
+                }
+            }
+        ]  
+    });
+});
+*/
