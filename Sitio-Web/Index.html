@@ -15,7 +15,10 @@
     </head>
 
     <body>
+
         <header>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
             <nav>
                 <div id="search-bar-container" class="search-bar-container-hidden">
                     <div class="search-bar-input-container">
@@ -24,6 +27,8 @@
                         <button id="close-button" class="close-button" title="Cerrar"><img src="Images/closeIcon.svg" alt="close"></button>
                     </div>
                 </div>
+
+                <label for="menu-toggle" class="menu-button"><img src="Images/menuIcon.svg" alt="menu"></label>
 
                 <span class="svg-logo">
                     <img  src="Images/EHQALogo.svg" alt="EstaHambreQueAta-logo">
@@ -63,10 +68,12 @@
                         </ul>
                     </li>
                 </ul>
-
-                <button id="search-button" class="search-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
-                <button class="account-button" title="Crear Cuenta"><a href="CreateAccount.html"><img src="Images/userIcon.svg" alt="account"></a></button>
-                <button class="cart-button" title="Tienda"><a href="Index.html"><img src="Images/cartIcon.svg" alt="cart"></a></button>
+                
+                <div class="nav-button-bar">
+                    <button id="search-button" class="search-button" title="Buscar"><img src="Images/searchIcon.svg" alt="search"></button>
+                    <button class="account-button" title="Crear Cuenta"><a href="CreateAccount.html"><img src="Images/userIcon.svg" alt="account"></a></button>
+                    <button class="cart-button" title="Tienda"><a href="Index.html"><img src="Images/cartIcon.svg" alt="cart"></a></button>
+                </div>
             </nav>
         </header>
 
