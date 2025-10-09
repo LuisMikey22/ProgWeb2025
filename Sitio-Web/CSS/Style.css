@@ -288,6 +288,7 @@ nav {
     width: auto;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-link-sub-list {
@@ -322,7 +323,7 @@ nav {
 .nav-link-sub-list li {
     display: block;
     flex: 1 1 10;
-    text-align: center;
+    text-align: left;
     align-self: center;
     width: auto;
     background-color: var(--color-white);
@@ -500,10 +501,11 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     min-width: 18%;
     overflow: hidden;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 50% 50%;
     justify-items: center;
     text-align: center;
     padding: 1.5%;
+    gap: 0.5rem;
     background-color: var(--color-white);
     border-style: solid;
     border-color: var(--color-dark-blue);
@@ -538,26 +540,21 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
 
 .art-desc-container {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     width: 100%;
-    max-height: 50%;
-    min-height: 50%;
-    margin: 1.5em 0 0 0;
+    margin: auto;
+    gap: 0.5rem;
 }
 
 .art-desc {
     position: relative;
     display: inline;
     margin: auto;
-    height: 80%;
     width: 100%;
-    max-height: 80%;
-    min-height: 80%;
     overflow: hidden;
     overflow-wrap: break-word;
-    flex: 0 1 80%;
     text-align: justify;
     font-size: 1.2rem;
     font-family: var(--font-secondary);
@@ -567,12 +564,8 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
 .art-price {
     display: inline;
     position: relative;
-    margin: 1.5em auto auto auto;
-    height: 20%;
+    margin: auto;
     width: 100%;
-    max-height: 20%;
-    min-height: 20%;
-    flex: 0 1 20%;
     font-size: 1.2rem;
     font-family: var(--font-secondary);
     color: var(--color-dark-blue);
@@ -607,6 +600,7 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     color: var(--color-white);
     font-family: var(--font-secondary);
     font-size: 1.2rem;
+    text-align: justify;
 }
 
 .info-banner-statement {
@@ -653,7 +647,7 @@ footer {
     height: auto;
     width: auto;
     margin: auto;
-    flex: 1 1 1;
+    flex: 1 1 auto;
     justify-content: center;
     align-content: center;
 }
@@ -932,7 +926,6 @@ footer {
     border-color: var(--color-lighter-blue);
 }
 
-
 @media only screen and (max-width: 480px) { 
     .search-bar-container-visible {
         height: 6vh;
@@ -952,6 +945,10 @@ footer {
         max-width: 68%;
         min-width: 68%;
         padding: 4%;
+    }
+
+    .copyright-content {
+        font-size: 0.5rem;
     }
 }
 
@@ -984,6 +981,10 @@ footer {
         height: 10vh;
     }
 
+    .art-desc, .art-price {
+        font-size: 1rem;
+    }
+
     .shipping-info-banner {
         font-size: 0.8rem;
         text-align: left;
@@ -998,7 +999,7 @@ footer {
         font-size: 1rem;
     }
 
-    .footer-copyright-content small {
+    .copyright-content {
         font-size: 1rem;
     }
 }
@@ -1039,9 +1040,10 @@ footer {
         left: 0;
         height: 100%;
         width: auto;
-        padding: 10% 0 0 2%;
+        padding: 15% 0 0 2%;
         margin: auto;
         flex-direction: column;
+        justify-content: flex-start;
         color: var(--color-dark-blue);
         background-color: var(--color-white);
         z-index: 30;
