@@ -18,14 +18,14 @@
 
 [07: Tarjeta personalizada con información e imagen](/CSS-Card/Index.html)
 
-[08: Cabecera con posición Sticky, diseño de página](/Sitio-Web/Index.html)
+[08: Cabecera con posición Sticky, diseño de página](/Sitio-Web/public/Index.html)
 
-[09: Formulario con estilos, pseudoelementos y pseudoclases](/Sitio-Web/CreateAccount.html)
+[09: Formulario con estilos, pseudoelementos y pseudoclases](/Sitio-Web/public/CreateAccount.html)
 
 [10: Menú de cabecera despegable y tarjetas personalizadas](/Sitio-Web/Index.html)
 
-[11: Variables y funciones](/Sitio-Web/Index.html)
+[11: Variables y funciones](/Sitio-Web/public/Index.html)
 
-[12: Display Grid en elementos con CSS](/Sitio-Web/Index.html)
+[12: Display Grid en elementos con CSS](/Sitio-Web/public/Index.html)
 
-[13: Sitio responsivo con Breakpoints CSS](/Sitio-Web/Index.html)
+[13: Sitio responsivo con Breakpoints CSS](/Sitio-Web/public/Index.html)
