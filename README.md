@@ -29,3 +29,5 @@
 [12: Display Grid en elementos con CSS](/Sitio-Web/public/Index.html)
 
 [13: Sitio responsivo con Breakpoints CSS](/Sitio-Web/public/Index.html)
+
+[14: Examen sitio web, nueva página aplicando Tailwindcss/Daisyui](/Sitio-Web/public/Product.html)

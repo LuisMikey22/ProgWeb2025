@@ -7,6 +7,6 @@
     "dev": "tailwindcss -i ./src/css/style.css -o ./public/output.css --watch"
   },
   "devDependencies": {
-    "daisyui": "^5.1.31"
+    "daisyui": "^5.2.3"
   }
 }
