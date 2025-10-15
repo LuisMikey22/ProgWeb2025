@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet"> 
+    <title>Calculadora</title>
+</head>
+<body>
+    <form>
+        <legend>Calculadora</legend>
+
+        <div class="input-container">
+            <label for="num1">Número 1:</label>
+            <input id="num1" type="number" required>
+        </div>
+        
+        <div class="input-container">
+            <label for="num2">Número 2:</label>
+            <input id="num2" type="number" required>
+        </div>
+
+        <div class="button-container">
+            <input id="add-calc-button" type="button" value="Calcular suma">
+            <input id="sub-calc-button" type="button" value="Calcular resta">
+            <input id="mul-calc-button" type="button" value="Calcular multiplicación">
+            <input id="div-calc-button" type="button" value="Calcular división">
+        </div>
+
+        <div class="input-container">
+            <label for="result">Resultado:</label>
+            <label id="result-label"></label>
+        </div>
+        
+    </form>
+</body>
+
+<script src="scripts/script.js" defer></script>
+
+</html>
