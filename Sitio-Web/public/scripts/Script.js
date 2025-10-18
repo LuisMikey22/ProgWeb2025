@@ -1,5 +1,5 @@
 const searchBarCont = document.getElementById("search-bar-container");
-const searchButton = document.getElementById("search-button")
+const searchButton = document.getElementById("search-button");
 
 const closeButton = document.getElementById("close-button");
 

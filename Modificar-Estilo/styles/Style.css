@@ -1,0 +1,84 @@
+:root {
+    --color-white: #ffffff;
+    --color-pink: #FF95C5;
+    --color-yellow: #FDFA2E;
+    --color-blue: #05E1F5;
+    --color-reset: #D5DEE2;
+    --color-dark-grey: #32393b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--color-white);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#container {
+    height: auto;
+    width: auto;
+    padding: 2%;
+    border-radius: 24px;
+    box-shadow: 0 4px 5px var(--color-dark-grey);
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-dark-grey);
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid var(--color-dark-grey);
+}
+
+#pinkButton {
+    background-color: var(--color-pink);
+}
+
+#blueButton {
+    background-color: var(--color-blue);
+}
+
+#yellowButton {
+    background-color: var(--color-yellow);
+}
+
+#resetButton {
+    background-color: var(--color-reset);
+}
+
+
+.pink-background {
+    background-color: var(--color-pink);
+}
+
+.blue-background {
+    background-color: var(--color-blue);
+}
+
+.yellow-background {
+    background-color: var(--color-yellow);
+}
+
+.default-background {
+    background-color: var(--color-body);
+    box-shadow: 0 4px 5px var(--color-dark-grey);
+}

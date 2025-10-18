@@ -34,3 +34,5 @@
 
 ### JavaScript---------------------------------------------------------
 [15: Calculadora funcional empleando JavaScript](/Calculadora/Index.html)
+
+[16: Cambio de color de elementos intercambiando clases](/Modificar-Estilo/Index.html)
