@@ -32,16 +32,15 @@
     src: url("../Fonts/Roboto.ttf") format('truetype');
 }
 */
-
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  themes: light --default;
-  root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
-  logs: true;
+    themes: light --default;
+    root: ":root";
+    include:;
+    exclude:;
+    prefix:;
+    logs: true;
 }
 
 * {
@@ -54,7 +53,6 @@
     color: var(--color-white);
     background-color: var(--color-dark-blue);
 }
-
 
 body {
     display: flex;
@@ -69,7 +67,7 @@ body {
     justify-items: center;
     overflow-X: hidden;
     background-color: var(--color-white);
-    background-image: url(../Public/Images/yarnBackgroundTexture.svg);
+    background-image: url("../Public/Images/yarnBackgroundTexture.svg");
     background-size: auto;
     background-repeat: repeat;
     background-position: center;
@@ -157,7 +155,7 @@ nav {
     margin: auto;
     background-color: var(--color-white);
     border-style: none;
-    vertical-align: middle;  
+    vertical-align: middle;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
@@ -169,15 +167,16 @@ nav {
     margin: auto;
     background-color: var(--color-white);
     border-style: none;
-    vertical-align: middle;  
+    vertical-align: middle;
     cursor: pointer;
 }
-
-.search-bar-button:hover, .close-button:hover {
+.close-button:hover,
+.search-bar-button:hover {
     opacity: 70%;
 }
 
-.search-bar-button img, .close-button img {
+.close-button img,
+.search-bar-button img {
     display: inline;
     height: 100%;
     width: 100%;
@@ -194,19 +193,16 @@ nav {
     color: var(--color-darker-blue);
     font-size: 18px;
 }
-
 .search-bar-input:hover {
     border-style: none;
     border-radius: var(--border-radius-8);
     box-shadow: 2px 2px 2px var(--color-light-grey);
     cursor: pointer;
 }
-
 .search-bar-input:focus {
     outline: none;
     border-style: none;
 }
-
 
 .svg-logo {
     position: relative;
@@ -217,7 +213,6 @@ nav {
     margin: auto auto auto 0;
     align-self: center;
 }
-
 .svg-logo:hover {
     opacity: 70%;
     cursor: pointer;
@@ -278,14 +273,18 @@ nav {
     cursor: pointer;
 }
 
-.search-button img, .account-button img, .cart-button img, .menu-button img {
+.account-button img,
+.cart-button img,
+.menu-button img,
+.search-button img {
     display: block;
     height: 90%;
     width: auto;
     margin: auto;
 }
-
-.account-button:hover , .search-button:hover, .cart-button:hover {
+.account-button:hover,
+.cart-button:hover,
+.search-button:hover {
     background-color: var(--color-lighter-grey);
 }
 
@@ -341,7 +340,6 @@ nav {
     border-style: solid;
     border-color: var(--color-lighter-grey);
 }
-
 .nav-link-sub-list li:hover {
     background-color: var(--color-lighter-grey);
     cursor: pointer;
@@ -364,13 +362,13 @@ nav {
     font-family: var(--font-secondary);
     cursor: pointer;
 }
-
-.nav-link-list li a:hover, .nav-link-sub-list li a:hover {
+.nav-link-list li a:hover,
+.nav-link-sub-list li a:hover {
     text-decoration: underline;
     text-decoration-thickness: 0.08rem;
 }
-
-li:hover .nav-link-sub-list { /*menú popup que aparece*/
+li:hover .nav-link-sub-list {
+    /*menú popup que aparece*/
     position: absolute;
     z-index: 100;
     display: flex;
@@ -391,7 +389,9 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
 }
 
 /*-------------CAROUSEL-------------*/
-.new-art, .best-selling-art, .seasonal-art {
+.best-selling-art,
+.new-art,
+.seasonal-art {
     display: flex;
     height: 100%;
     width: 95%;
@@ -400,10 +400,13 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     text-align: center;
 }
 
-.new-art-title, .best-selling-art-title, .seasonal-art-title, .create-account-fieldset legend {
+.best-selling-art-title,
+.create-account-fieldset legend,
+.new-art-title,
+.seasonal-art-title {
     display: inline;
     height: auto;
-    margin: 2em auto 1em auto;
+    margin: 2em auto 1em;
     text-align: center;
     font-size: 1.6rem;
     font-weight: bold;
@@ -411,11 +414,13 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     color: var(--color-dark-blue);
 }
 
-.new-art-carousel, .best-selling-art-carousel, .seasonal-art-carousel {
+.best-selling-art-carousel,
+.new-art-carousel,
+.seasonal-art-carousel {
     display: flex;
     width: 100%;
     height: 100%;
-    margin: 0 auto 1em auto;
+    margin: 0 auto 1em;
     flex-direction: row;
     flex: 1 1 0;
     align-items: center;
@@ -424,7 +429,8 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     transform-style: flat;
 }
 
-.previous-element-button-container, .next-element-button-container {
+.next-element-button-container,
+.previous-element-button-container {
     display: flex;
     position: relative;
     height: 15%;
@@ -433,7 +439,8 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     overflow: visible;
 }
 
-.previous-element-button, .next-element-button {
+.next-element-button,
+.previous-element-button {
     height: 100%;
     width: 100%;
     background-color: transparent;
@@ -441,7 +448,8 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     cursor: pointer;
 }
 
-.previous-element-button::before, .next-element-button::before{
+.next-element-button::before,
+.previous-element-button::before {
     display: flex;
     height: 100%;
     width: 100%;
@@ -460,13 +468,15 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
 .next-element-button::before {
     content: ">";
 }
-
-.previous-element-button:hover, .next-element-button:hover {
+.next-element-button:hover,
+.previous-element-button:hover {
     opacity: 70%;
     cursor: pointer;
 }
 
-.new-art-item-container, .best-selling-art-item-container, .seasonal-art-item-container {
+.best-selling-art-item-container,
+.new-art-item-container,
+.seasonal-art-item-container {
     position: relative;
     display: flex;
     overflow-x: scroll;
@@ -489,14 +499,13 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     border-color: var(--color-light-grey);
 }
 
-.best-selling-art-item-container { 
+.best-selling-art-item-container {
     background-color: var(--color-coral);
     border-radius: var(--border-radius-24);
     border-color: var(--color-coral);
 }
 
-
-.seasonal-art-item-container { 
+.seasonal-art-item-container {
     background-color: var(--color-electric-blue);
     border-radius: var(--border-radius-24);
     border-color: var(--color-electric-blue);
@@ -531,7 +540,8 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     overflow: hidden;
 }
 
-.art-item-image-container img, .art-product-image-container img {
+.art-item-image-container img,
+.art-product-image-container img {
     display: inline;
     margin: auto;
     height: inherit;
@@ -543,7 +553,6 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     border-radius: var(--border-radius-24);
     image-rendering: auto;
 }
-
 .art-item img:hover {
     opacity: 70%;
     cursor: pointer;
@@ -587,11 +596,12 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     cursor: pointer;
 }
 
-.art-desc::first-letter, .art-price::first-letter {
+.art-desc::first-letter,
+.art-price::first-letter {
     text-transform: capitalize;
 }
-
-.art-desc:hover, .art-price:hover {
+.art-desc:hover,
+.art-price:hover {
     text-decoration: underline;
     text-decoration-color: var(--color-dark-blue);
     text-decoration-thickness: 0.1rem;
@@ -599,9 +609,8 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
 }
 
 .carousel-indicator {
-    margin: auto auto 1em auto;
+    margin: auto auto 1em;
 }
-
 
 /*-------------BANNER-------------*/
 .shipping-info-banner {
@@ -622,18 +631,21 @@ li:hover .nav-link-sub-list { /*menú popup que aparece*/
     display: flex;
 }
 
-.shipping-icon, .return-icon, .star-review-icon {
+.return-icon,
+.shipping-icon,
+.star-review-icon {
     display: flex;
     height: 1.6rem;
     width: auto;
     margin: auto 0.5rem auto auto;
 }
 
-.shipping-icon img, .return-icon img, .star-review-icon img {
+.return-icon img,
+.shipping-icon img,
+.star-review-icon img {
     height: auto;
     width: auto;
 }
-
 
 footer {
     height: auto;
@@ -656,7 +668,9 @@ footer {
     justify-content: space-evenly;
 }
 
-.about-links-container , .help-links-container , .store-links-container {
+.about-links-container,
+.help-links-container,
+.store-links-container {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -667,7 +681,9 @@ footer {
     align-content: center;
 }
 
-.about-links-container h4, .help-links-container h4, .store-links-container h4 {
+.about-links-container h4,
+.help-links-container h4,
+.store-links-container h4 {
     display: block;
     padding: 0.5rem;
     color: var(--color-darker-blue);
@@ -680,13 +696,17 @@ footer {
     border-bottom-color: var(--color-darker-blue);
 }
 
-.about-list, .help-list, .store-list {
+.about-list,
+.help-list,
+.store-list {
     display: block;
     list-style: none;
     justify-content: center;
 }
 
-.about-list li, .help-list li, .store-list li {
+.about-list li,
+.help-list li,
+.store-list li {
     display: grid;
     margin: auto;
     padding: 0.5rem;
@@ -701,13 +721,11 @@ footer {
     line-height: 1.2rem;
     cursor: pointer;
 }
-
 .footer-links-bar ul li a:hover {
     text-decoration: underline;
     text-decoration-thickness: 1.2px;
     text-decoration-color: var(--color-darker-blue);
 }
-
 
 .footer-brand-links-bar {
     display: flex;
@@ -734,7 +752,8 @@ footer {
     margin: auto 5% auto auto;
 }
 
-.social-media-links .instagram-button, .social-media-links .youtube-button {
+.social-media-links .instagram-button,
+.social-media-links .youtube-button {
     display: flex;
     height: 2.2rem;
     width: 2.2rem;
@@ -744,8 +763,8 @@ footer {
     border-radius: var(--border-radius-24);
     cursor: pointer;
 }
-
-.instagram-button:hover, .youtube-button:hover {
+.instagram-button:hover,
+.youtube-button:hover {
     background-color: var(--color-lighter-grey);
 }
 
@@ -785,7 +804,6 @@ footer {
     font: var(--font-secondary);
     font-size: 1rem;
 }
-
 
 .create-account-section {
     height: auto;
@@ -833,8 +851,12 @@ footer {
     content: "🧶";
 }
 
-.name-input-container, .email-input-container, .password-input-container, .desc-container, .techniques-options-container,
-.age-range-container {
+.age-range-container,
+.desc-container,
+.email-input-container,
+.name-input-container,
+.password-input-container,
+.techniques-options-container {
     display: block;
     margin: 15px 5%;
     height: auto;
@@ -845,7 +867,7 @@ footer {
 .create-account-fieldset label {
     display: flex;
     height: auto;
-    width: 100%; 
+    width: 100%;
     margin: auto;
     text-align: justify;
     font-size: 14px;
@@ -856,19 +878,17 @@ footer {
 .create-account-fieldset input {
     display: flex;
     width: 100%;
-    margin: 5px 0 10px 0;
+    margin: 5px 0 10px;
     padding: 8px;
     border: 1.7px solid var(--color-dark-blue);
     border-radius: var(--border-radius-16);
     font-size: 12px;
 }
-
 .create-account-fieldset input:hover {
     box-shadow: 2px 2px 4px var(--color-lighter-blue);
     cursor: pointer;
 }
-
-.create-account-fieldset input:focus{
+.create-account-fieldset input:focus {
     outline: var(--color-electric-blue);
     border: 1.7px solid var(--color-electric-blue);
     border-radius: var(--border-radius-16);
@@ -877,8 +897,8 @@ footer {
 .desc-container textarea {
     display: block;
     height: 100px;
-    width: 100%; 
-    margin: 10px 0 0 0;
+    width: 100%;
+    margin: 10px 0 0;
     padding: 8px;
     font-size: 12px;
     font-family: var(--font-secondary);
@@ -887,13 +907,11 @@ footer {
     border-radius: var(--border-radius-16);
     resize: none;
 }
-
 .desc-container textarea:focus {
     outline: var(--color-electric-blue);
     border: 1.7px solid var(--color-electric-blue);
     border-radius: var(--border-radius-16);
 }
-
 .desc-container textarea:hover {
     box-shadow: 2px 2px 4px var(--color-lighter-blue);
     cursor: pointer;
@@ -902,20 +920,18 @@ footer {
 .techniques-options-container select {
     height: auto;
     width: 100%;
-    margin: 5px 0 0 0;
+    margin: 5px 0 0;
     padding: 8px;
     color: var(--color-darker-blue);
     border: 2px solid var(--color-dark-blue);
     border-radius: var(--border-radius-16);
     font-size: 12px;
 }
-
 .techniques-options-container select:focus {
     outline: var(--color-electric-blue);
     border: 1.7px solid var(--color-electric-blue);
     border-radius: var(--border-radius-16);
 }
-
 .techniques-options-container select:hover {
     box-shadow: 2px 2px 4px var(--color-lighter-blue);
     cursor: pointer;
@@ -936,7 +952,6 @@ footer {
     border-color: var(--color-darker-blue);
     border-radius: var(--border-radius-16);
 }
-
 .create-account-form button:hover {
     background-color: var(--color-lighter-blue);
     border-color: var(--color-lighter-blue);
@@ -957,9 +972,7 @@ footer {
     background-color: var(--color-white);
     color: var(--color-dark-blue);
 }
-
-
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
     .search-bar-container-visible {
         height: 6vh;
     }
@@ -993,7 +1006,6 @@ footer {
         margin: 5%;
     }
 }
-
 @media only screen and (max-width: 768px) {
     .search-bar-container-visible {
         height: 8vh;
@@ -1008,14 +1020,19 @@ footer {
         margin: auto;
     }
 
-    .search-button, .account-button, .cart-button, .menu-button {
+    .account-button,
+    .cart-button,
+    .menu-button,
+    .search-button {
         height: 2.5rem;
         width: 2.5rem;
         margin: 0.5rem;
         flex: 0 1 2.5rem;
     }
 
-    .new-art-title, .best-selling-art-title, .seasonal-art-title {
+    .best-selling-art-title,
+    .new-art-title,
+    .seasonal-art-title {
         font-size: 1.4rem;
     }
 
@@ -1023,7 +1040,8 @@ footer {
         height: 10vh;
     }
 
-    .art-desc, .art-price {
+    .art-desc,
+    .art-price {
         font-size: 1rem;
     }
 
@@ -1037,7 +1055,9 @@ footer {
 
     }
 
-    .about-links-container h4, .help-links-container h4, .store-links-container h4 {
+    .about-links-container h4,
+    .help-links-container h4,
+    .store-links-container h4 {
         font-size: 1rem;
     }
 
@@ -1045,7 +1065,6 @@ footer {
         font-size: 1rem;
     }
 }
-
 @media only screen and (min-width: 500px) and (max-width: 800px) {
     .art-item {
         width: 35%;
@@ -1054,7 +1073,6 @@ footer {
         padding: 2.5%;
     }
 }
-
 @media only screen and (max-width: 1200px) {
     nav {
         padding: 1.3% 5%;
@@ -1102,13 +1120,11 @@ footer {
         color: var(--color-dark-blue);
         font-size: 0.8em;
     }
-
     .menu-toggle:checked ~ nav .nav-link-list {
         overflow: visible;
         transform: translateX(0);
         background-color: var(--color-white);
     }
-
     .menu-toggle:checked ~ nav .menu-button {
         background-color: transparent;
     }

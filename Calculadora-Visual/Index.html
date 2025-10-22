@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Gráfica</title>
+        <link href="styles/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="calc-container">
+            <div class="main-container">
+                <label id="input-content"> </label>
+
+                <div class="button-container">
+                    <div class="row item1">
+                        <input type="button" id="num7" value="7">
+                        <input type="button" id="num8" value="8">
+                        <input type="button" id="num9"value="9">
+                        <input type="button" id="slash" value="/">
+                    </div>
+                    
+                    <div class="row item2">
+                        <input type="button" id="num4" value="4">
+                        <input type="button" id="num5" value="5">
+                        <input type="button" id="num6" value="6">
+                        <input type="button" id="asterisk" value="*">
+                    </div>
+
+                    <div class="row item3">
+                        <input type="button" id="num1" value="1">
+                        <input type="button" id="num2" value="2">
+                        <input type="button" id="num3" value="3">
+                        <input type="button" id="minus" value="-">
+                    </div>
+                    
+                    <div class="row item4">
+                        <input type="button" id="num0" value="0">
+                        <input type="button" id="equals" value="=">
+                        <input type="button" id="clear" value="C">
+                        <input type="button" id="plus" value="+">
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-container">
+                <h2> Historial de cálculos</h2>
+
+                <div class="history-calc-container" id="history-content">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="scripts/script.js"></script>
+</html>
