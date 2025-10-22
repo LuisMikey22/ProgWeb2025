@@ -43,6 +43,7 @@ calcButtons.forEach(button => {
 
 document.addEventListener('keydown', function(e){
     let pressedKey = e.key;
+    console.log(pressedKey)
     e.preventDefault(); //quitar acción por defecto al presionar una combinación de teclas
 
     switch(pressedKey) {
@@ -62,6 +63,16 @@ document.addEventListener('keydown', function(e){
         break;
 
         case '=':
+            calculate();
+        break;
+
+        case 'Backspace':
+            //eliminar último caracter
+            let operation = inputContent.textContent.replace(inputContent.textContent.slice(-1), ""); 
+            inputContent.textContent = operation;
+        break;
+        
+        case 'Enter':
             calculate();
         break;
     }
