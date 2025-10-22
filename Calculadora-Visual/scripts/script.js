@@ -50,7 +50,7 @@ document.addEventListener('keydown', function(e){
         case '9':case '8':case '7':
         case '6':case '5':case '4':
         case '3':case '2':case '1':
-        case '1':
+        case '1':case '0':
             inputContent.textContent += pressedKey;
         break;
 
@@ -68,7 +68,7 @@ document.addEventListener('keydown', function(e){
 
         case 'Backspace':
             //eliminar último caracter
-            let operation = inputContent.textContent.replace(inputContent.textContent.slice(-1), ""); 
+            let operation = inputContent.textContent.substring(0, inputContent.textContent.length-1); 
             inputContent.textContent = operation;
         break;
         
