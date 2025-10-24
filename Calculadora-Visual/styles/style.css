@@ -40,9 +40,10 @@ body {
     color: rgb(73, 12, 130);
     border: 2px solid rgb(89, 12, 162);
     border-radius: 16px;
+    cursor: pointer;
 }
 
-.main-container input:focus {
+.main-container label:hover {
   outline: rgb(1, 204, 255);
   border: 2px solid rgb(1, 204, 255);
   border-radius: 16px;

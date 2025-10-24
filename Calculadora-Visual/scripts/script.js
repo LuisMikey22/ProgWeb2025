@@ -10,7 +10,9 @@ function calculate() {
             historyContent.appendChild(calcResult);
 
             inputContent.textContent = eval(inputContent.textContent); //resultado en campo de texto
-        }   
+        }else {
+            inputContent.textContent = "Error";
+        }
     }
 }
 
@@ -18,20 +20,26 @@ function calculate() {
 function operationHistory(pressedKey) {
     if(Number.isInteger(Number.parseInt(inputContent.textContent.slice(-1)))) { //último caracter
         inputContent.textContent += pressedKey;  
+    }else {
+        inputContent.textContent = "Ingrese un número antes";
     }
 }
 
 calcButtons.forEach(button => {
     button.addEventListener('click', function() {
+        if(inputContent.textContent.slice(-1).match(/^[A-Za-z]+$/)) { //eliminar texto de error o advertencia anterior
+            inputContent.textContent = " ";
+        }
+
         if(Number.isInteger(Number.parseInt(this.value))) {
             inputContent.textContent += this.value; 
         }
 
-        if(this.value==='/' || this.value==='*' || this.value==='-' || this.value==='+'){ 
+        if(this.value==='/' || this.value==='*' || this.value==='-' || this.value==='+') { 
             operationHistory(this.value);
         }
 
-        if(this.value==='C' || this.value==='c') { 
+        if(this.value==='C') { 
             inputContent.textContent = " ";
         }
   
@@ -41,7 +49,11 @@ calcButtons.forEach(button => {
     })
 });
 
-document.addEventListener('keydown', function(e){
+[inputContent, document].forEach(element => element.addEventListener('keydown', function(e) { //se seleccionan ambos elementos con [] y forEach
+    if(inputContent.textContent.slice(-1).match(/^[A-Za-z]+$/)) { //eliminar texto de error o advertencia anterior
+        inputContent.textContent = " ";
+    }
+
     let pressedKey = e.key;
     console.log(pressedKey)
     e.preventDefault(); //quitar acción por defecto al presionar una combinación de teclas
@@ -76,4 +88,4 @@ document.addEventListener('keydown', function(e){
             calculate();
         break;
     }
-});
+}));
