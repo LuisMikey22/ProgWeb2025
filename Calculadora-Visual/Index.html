@@ -10,7 +10,7 @@
     <body>
         <div class="calc-container">
             <div class="main-container">
-                <label id="input-content"></label>
+                <input type="text" id="input-content" disabled>
 
                 <div class="button-container">
                     <div class="row item1">
@@ -44,10 +44,12 @@
             </div>
 
             <div class="history-container">
-                <h2> Historial de cálculos</h2>
+                <h2>history</h2>
 
                 <div class="history-calc-container" id="history-content">
                 </div>
+                
+                <input type="button" id="clearHistory" value="Clear history">
             </div>
         </div>
     </body>

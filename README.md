@@ -38,3 +38,5 @@
 [16: Cambio de color de elementos intercambiando clases](/Modificar-Estilo/Index.html)
 
 [17: Calculadora visual, funcional y mejorada empleando JavaScript](/Calculadora-Visual/Index.html)
+
+[18: Visualizador de tarjetas de tareas funcional](/Tarjetas-Dinamicas/Index.html)

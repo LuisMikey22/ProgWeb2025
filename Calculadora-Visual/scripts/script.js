@@ -3,45 +3,49 @@ const calcButtons = document.querySelectorAll('input');
 const historyContent = document.getElementById('history-content');
 
 function calculate() {
-    if(inputContent.textContent!==" ") { //no colocar en historial si el campo de texto se encuentra vacío
-        if(Number.isInteger(Number.parseInt(inputContent.textContent.slice(-1)))) { //si el último caracter es número
+    if(inputContent.value!==" ") { //no colocar en historial si el campo de texto se encuentra vacío
+        if(Number.isInteger(Number.parseInt(inputContent.value.slice(-1)))) { //si el último caracter es número
             let calcResult = document.createElement('h2');
-            calcResult.textContent = inputContent.textContent + "=" + eval(inputContent.textContent);
+            calcResult.textContent = inputContent.value + "=" + eval(inputContent.value);
             historyContent.appendChild(calcResult);
 
-            inputContent.textContent = eval(inputContent.textContent); //resultado en campo de texto
+            inputContent.value = eval(inputContent.value); //resultado en campo de texto
         }else {
-            inputContent.textContent = "Error";
+            inputContent.value = "Error";
         }
     }
 }
 
 //obtener el último caracter para no colocar doble símbolo de operación
 function operationHistory(pressedKey) {
-    if(Number.isInteger(Number.parseInt(inputContent.textContent.slice(-1)))) { //último caracter
-        inputContent.textContent += pressedKey;  
+    if(Number.isInteger(Number.parseInt(inputContent.value.slice(-1)))) { //último caracter
+        inputContent.value += pressedKey;  
     }else {
-        inputContent.textContent = "Ingrese un número antes";
+        inputContent.value = "Ingrese un número antes";
     }
 }
 
 calcButtons.forEach(button => {
     button.addEventListener('click', function() {
-        if(inputContent.textContent.slice(-1).match(/^[A-Za-z]+$/)) { //eliminar texto de error o advertencia anterior
-            inputContent.textContent = " ";
+        if(inputContent.value.slice(-1).match(/^[A-Za-z]+$/)) { //eliminar texto de error o advertencia anterior
+            inputContent.value = " ";
         }
 
         if(Number.isInteger(Number.parseInt(this.value))) {
-            inputContent.textContent += this.value; 
+            inputContent.value += this.value; 
         }
 
         if(this.value==='/' || this.value==='*' || this.value==='-' || this.value==='+') { 
             operationHistory(this.value);
         }
 
-        if(this.value==='C') { 
-            inputContent.textContent = " ";
+        if(this.value==='C') {
+            inputContent.value = " ";
         }
+
+        if(this.value==='Clear history') {
+            historyContent.textContent = " ";
+        } 
   
         if(this.value==='=') { 
             calculate();
@@ -49,9 +53,9 @@ calcButtons.forEach(button => {
     })
 });
 
-[inputContent, document].forEach(element => element.addEventListener('keydown', function(e) { //se seleccionan ambos elementos con [] y forEach
-    if(inputContent.textContent.slice(-1).match(/^[A-Za-z]+$/)) { //eliminar texto de error o advertencia anterior
-        inputContent.textContent = " ";
+document.addEventListener('keydown', function(e) { //se seleccionan ambos elementos con [] y forEach
+    if(inputContent.value.slice(-1).match(/^[A-Za-z]+$/)) { //eliminar texto de error o advertencia anterior
+        inputContent.value = " ";
     }
 
     let pressedKey = e.key;
@@ -63,7 +67,7 @@ calcButtons.forEach(button => {
         case '6':case '5':case '4':
         case '3':case '2':case '1':
         case '1':case '0':
-            inputContent.textContent += pressedKey;
+            inputContent.value += pressedKey;
         break;
 
         case '/':case '*':case '-':case '+':
@@ -71,7 +75,7 @@ calcButtons.forEach(button => {
         break;
 
         case 'C': case 'c':
-            pressedKey
+            inputContent.value = " ";
         break;
 
         case '=':
@@ -80,12 +84,12 @@ calcButtons.forEach(button => {
 
         case 'Backspace':
             //eliminar último caracter
-            let operation = inputContent.textContent.substring(0, inputContent.textContent.length-1); 
-            inputContent.textContent = operation;
+            let operation = inputContent.value.substring(0, inputContent.value.length-1); 
+            inputContent.value = operation;
         break;
         
         case 'Enter':
             calculate();
         break;
     }
-}));
+});
