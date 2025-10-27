@@ -3,50 +3,53 @@ const addCardButton = document.getElementById('add-button');
 
 const cardContainer = document.getElementById('card-container');
 
-let currentCards = JSON.parse(localStorage.getItem('currentCards')) || [];
+let currentCards = []; //de tipo string
 let cont = 0;
 
-function deleteCard(cardId) {
-    let cardToRemove = document.getElementById(cardId);
-    if(cardToRemove && cardContainer.contains(cardToRemove)) {
-        cardContainer.removeChild(cardToRemove);
-    }
-    
-    const index = currentCards.findIndex(el => el.id == cardId);
-    if(index!==-1) {
-        currentCards.splice(index, 1)
-        cont--;
+addCardButton.addEventListener('click', function() {
+    addCardToArray();
+});
 
-        updateCurrentCards();
-    }
-}
+function addCardToArray() {
+    let duplicatedCard = false;
 
-function addCard() {
-    if(nameInput.value!=="") {
+    currentCards.forEach(element => {
+        if(element===nameInput.value) { //cambiar valor si ya existe una tarjeta con el mismo nombre
+            duplicatedCard = true;
+        }
+    });
+
+    if(nameInput.value!=="" && !duplicatedCard) { //no permitir ingresar el mismo nombre en dos tarjetas para evitar eliminaciones erróneas
         nameInput.classList.remove('error-outline');
 
-        const cardObject = {};
+        let cardNameText = nameInput.value;
 
-        cardObject.cardNameText = nameInput.value;
-        cardObject.cardId = "card"+(cont++);
-        cardObject.cardIsChecked = false;
-
-        storageCard(cardObject);
+        currentCards.push(cardNameText);
+        addCardToContainer(cardNameText);
+        localStorage.setItem('cards', JSON.stringify(currentCards)); 
     }else {
         nameInput.classList.add('error-outline');
     }
 }
 
-function storageCard(cardObject) {
-    currentCards.push(cardObject);
-    addStoragedCard(cardObject);
-    localStorage.setItem('history', JSON.stringify(currentCards));
+function deleteCard(cardNameText){
+    let cardsTransfer = [];
+
+    currentCards.forEach(element => {
+        if(element!==cardNameText) { //transferir todos los textos al arreglo excluyendo al texto de la tarjeta a eliminar
+            cardsTransfer.push(element);
+        }
+    });
+
+    currentCards = cardsTransfer;
+    localStorage.setItem('cards', JSON.stringify(currentCards));
+    updateCurrentCards();
 }
 
-function addStoragedCard(cardObject) {
+function addCardToContainer(cardNameText) {
     let cardText = document.createElement('h2');
     cardText.classList = "card-name";
-    cardText.textContent = cardObject.cardNameText;
+    cardText.textContent = cardNameText;
 
     let cardCheckbox = document.createElement('input');
     cardCheckbox.classList = "card-checkbox";
@@ -66,52 +69,38 @@ function addStoragedCard(cardObject) {
     card.classList = "card";
     card.appendChild(cardText);
     card.appendChild(cardActionContainer);
-    card.id = cardObject.cardId;
 
     cardCheckbox.addEventListener('change', function() {
         if(this.checked){
-            cardObject.cardIsChecked = true;
             cardText.classList.add('line-through-text');
         }else {
-            cardObject.cardIsChecked = false;
             cardText.classList.remove('line-through-text');
         }
     });
 
     cardButton.addEventListener('click', function() {
-        deleteCard(cardObject.cardId);
+        deleteCard(cardNameText);
     });
-
+    
     cardContainer.prepend(card);
 }
 
-function updateCurrentCards() {
-    currentCards = JSON.parse(localStorage.getItem('history'));
-    console.log(currentCards);
+function updateCurrentCards(){
+    currentCards = JSON.parse(localStorage.getItem('cards'));
 
-    if(currentCards == null) {
+    if(currentCards==null){
         currentCards = [];
     }
 
-    cardContainer.innerHTML = '';
-
+    cardContainer.innerHTML = ''; //vaciar temporalmente el contenedor para no duplicar tarjetas
     currentCards.forEach(element => {
-        addStoragedCard(element);
+        addCardToContainer(element);
     });
 }
 
-function removeHistoryItem(cardId) {
-    localStorage.removeItem(cardId);
+window.onload= function() {
     updateCurrentCards();
 }
-
-window.onload = function() {
-    updateCurrentCards();
-}
-
-addCardButton.addEventListener('click', function() {
-    addCard();
-});
 
 document.addEventListener('keydown', function(e) {
     let pressedKey = e.key;
