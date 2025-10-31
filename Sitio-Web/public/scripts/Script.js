@@ -1,14 +1,25 @@
 const searchBarCont = document.getElementById("search-bar-container");
 const searchButton = document.getElementById("search-button");
 
+const menuToggle = document.getElementById("menu-toggle");
+const menuButtonImage = document.getElementById("menu-button-image");
+
 const closeButton = document.getElementById("close-button");
 
-searchButton.addEventListener('click', () =>{
-    searchBarCont.classList.replace("search-bar-container-hidden", "search-bar-container-visible")
+searchButton.addEventListener('click', function() {
+    searchBarCont.classList.replace("search-bar-container-hidden", "search-bar-container-visible");
 });
 
-closeButton.addEventListener('click', () =>{
-    searchBarCont.classList.replace("search-bar-container-visible", "search-bar-container-hidden")
+closeButton.addEventListener('click', function() {
+    searchBarCont.classList.replace("search-bar-container-visible", "search-bar-container-hidden");
+});
+
+menuToggle.addEventListener('change', function() {
+    if(this.checked){
+        menuButtonImage.src = "images/closeIconDark.svg";
+    }else {
+        menuButtonImage.src = "images/menuIcon.svg";
+    }
 });
 
 /*
