@@ -40,3 +40,6 @@
 [17: Calculadora visual, funcional y mejorada empleando JavaScript](/Calculadora-Visual/Index.html)
 
 [18: Visualizador de tarjetas de tareas funcional](/Tarjetas-Dinamicas/Index.html)
+
+[19: Implementación de módulos de JavaScript en calculadora visual](/Calculadora-Visual/Index.html)
+[----Implementación de módulos de JavaScript en tarjetas de tareas](/Tarjetas-Dinamicas/Index.html)

@@ -1,29 +1,9 @@
-const inputContent = document.getElementById('input-content');
+import {operationHistory} from "./validate.js";
+import {calculate} from "./math.js";
+
+export const inputContent = document.getElementById('input-content');
 const calcButtons = document.querySelectorAll('input');
-const historyContent = document.getElementById('history-content');
-
-function calculate() {
-    if(inputContent.value!==" ") { //no colocar en historial si el campo de texto se encuentra vacío
-        if(Number.isInteger(Number.parseInt(inputContent.value.slice(-1)))) { //si el último caracter es número
-            let calcResult = document.createElement('h2');
-            calcResult.textContent = inputContent.value + "=" + eval(inputContent.value);
-            historyContent.appendChild(calcResult);
-
-            inputContent.value = eval(inputContent.value); //resultado en campo de texto
-        }else {
-            inputContent.value = "Error";
-        }
-    }
-}
-
-//obtener el último caracter para no colocar doble símbolo de operación
-function operationHistory(pressedKey) {
-    if(Number.isInteger(Number.parseInt(inputContent.value.slice(-1)))) { //último caracter
-        inputContent.value += pressedKey;  
-    }else {
-        inputContent.value = "Ingrese un número antes";
-    }
-}
+export const historyContent = document.getElementById('history-content');
 
 calcButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -93,3 +73,8 @@ document.addEventListener('keydown', function(e) { //se seleccionan ambos elemen
         break;
     }
 });
+
+export function getNameInput() {
+    const nameInput = document.getElementById('card-name-input');
+    return nameInput;
+}
